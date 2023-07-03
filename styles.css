@@ -1,0 +1,122 @@
+:root {
+    --color-1: rgb(14, 14 ,14);
+    --color-2: rgb(238, 238, 238);
+    --color-temp: rgb(33, 33, 33);
+}
+
+/* @font-face {
+    font-family: deathFont;
+    src: url(lib/fonts/death-font.ttf);
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-1);
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 0 1.5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    outline: 1px solid var(--color-temp);
+    width: 92.5vw;
+    height: 6vh;
+    margin: 1.5em auto 0 auto;
+
+    color: var(--color-2);
+}
+
+#desktop-nav-toggle {
+    display: block;
+}
+
+#mobile-nav-toggle {
+    display: none;
+}
+
+#hero-section {
+    /* display: none; */
+    outline: 1px solid var(--color-temp);
+    width: 95vw;
+    height: 24vh;
+    margin: 1.5em auto 0 auto;
+}
+
+#gallery-section {
+    outline: 1px solid var(--color-temp);
+    width: 92.5vw;
+    margin: 1em auto 0 auto;
+    line-height: 0;
+   
+    -webkit-column-count: 3;
+    -webkit-column-gap:   .5em;
+    -moz-column-count:    3;
+    -moz-column-gap:      .5em;
+    column-count:         3;
+    column-gap:           .5em; 
+}
+
+#gallery-section img {
+    width: 100% !important;
+    height: auto !important;
+    margin-top: .5em;
+}
+
+#gallery-section img:hover {
+    transform: scale(102%);
+}
+
+footer {
+    color: var(--color-2);
+    margin: 6em auto 1em auto;
+}
+
+/* MOBILE MEDIA-QUERY */
+
+@media (max-width: 44em) {
+
+    header {
+        width: 95%;
+    }
+
+    #desktop-nav-toggle {
+        display: none;
+    }
+    
+    #mobile-nav-toggle {
+        display: block;
+        color: red;
+    }
+
+    #hero-section {
+        display: none;
+    }
+
+    #gallery-section {
+        width: 95%;
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+
+    #gallery-section img:hover {
+        transform: scale(100%);
+    }
+
+    footer {
+        margin: 3em auto 1em auto;
+    }
+
+}
